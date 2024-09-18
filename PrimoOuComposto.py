@@ -25,6 +25,3 @@ if len(divisors) == 2:
 else:
     divisores_string = ', '.join(str(i) for i in divisors)
     print(f'{n} - composto, divisores: {divisores_string}')
-
-
-
