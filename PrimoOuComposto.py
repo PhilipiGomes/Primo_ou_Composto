@@ -2,11 +2,11 @@ import os, time
 
 
 def divisores(n):
-    divisors = []
-    i = 1
-    while i < n + 1:
+    divisors = [1,n]
+    i = 2
+    while i < n:
         if n % i == 0:
-            divisors.append(i)
+            divisors.insert(-1,i)
         i += 1
     return divisors
 
@@ -23,6 +23,8 @@ os.system('cls')
 if len(divisors) == 2:
     print(f'{n} - primo')
 else:
-    print(f'{n} - composto, divisores: {divisors}')
+    divisores_string = ', '.join(str(i) for i in divisors)
+    print(f'{n} - composto, divisores: {divisores_string}')
+
 
 
